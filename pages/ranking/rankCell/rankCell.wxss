@@ -1,0 +1,51 @@
+
+.mainImg{
+  float: left;
+  margin-left: 8px;
+}
+
+
+.naV{
+  margin-top: 5px;
+}
+
+
+.rightView{
+  margin-left: 8px;
+  height: 114px;
+  float: left;
+}
+
+.title{
+  font-size: 15px;
+}
+
+.text{
+  margin-top: 3px;
+   font-size: 12px;
+   color: #AAAAAA
+}
+
+
+.chapter{
+  font-size: 12px;
+  color: red;
+  margin-top: 3px;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap; 
+}
+ 
+.space{
+  clear: both;
+  height: 5px;
+  width: 100%;
+  
+}
+
+.line{
+  height: 1px;
+  width: 100%;
+  background: #DDDDDD;
+ 
+}

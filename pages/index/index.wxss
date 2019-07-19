@@ -1,0 +1,151 @@
+/**index.wxss**/
+@import "/pages/index/cell/homeCell.wxss";
+@import "/pages/index/cell/bigCell.wxss";
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.cell {
+  width: 33%;
+  height: 100;
+  background-color: #aaaaaa;
+}
+
+.header{
+  height: 25px;
+  width: 100%;
+  display: inline-block;
+  text-align: center
+}
+
+.footer{
+  height: 5px;
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.sectionTitle{
+  font-size: 13px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 8px;
+  color: red;
+}
+
+.img{
+  font-size: 15px;
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px;
+  color: red;
+}
+
+.section{
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+
+.topic{
+  display: inline-block;
+  text-align: center;
+  
+}
+
+.searchView_searching {  
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+  margin-left: 20rpx;
+  margin-right: 20rpx; 
+  width: 80vw;
+  display: inline-block;
+}
+.searchView { 
+  position: fixed; 
+  height: 50px;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 999;
+  
+}  
+input{
+  font-size: 15px;
+  height: 35px;
+  background-color: #eeeeee;
+  border-radius: 17.5px;
+  display: inline-block;
+  font-weight: 300;
+  padding-left: 30px;
+}
+.search_resultView{
+  position: fixed; 
+  width: 100vw;
+  height: 100vh;
+  top: 50px;
+  z-index: 999;
+  background-color: white; 
+}
+.searchcion {  
+  position: absolute;  
+  left: 8px;  
+  z-index: 2;  
+  width: 20px;  
+  height: 20px;
+  top: 6px;
+}
+.searchInput{
+  position: relative;
+  display: inline-block;
+  top: 8px;
+  height: 35px; 
+  left: 8px;
+}
+
+.circle-float{  
+  color: #ffffff;  
+  position: fixed;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  bottom: 50rpx;  
+  right: 50rpx;  
+  width: 120rpx;  
+  height: 120rpx;  
+  border-radius: 50%;  
+  font-size: 28rpx;  
+  background: rgba(0, 0, 0, 0.7);
+  
+}  
+
+.weekBtn{
+  color: #ffffff;  
+  position: fixed;  
+  display: flex;  
+  align-items: center; 
+  text-align: center; 
+  bottom: 80rpx;  
+  right: 80rpx;  
+  width: 60rpx;  
+  height: 60rpx;  
+  border-radius: 50%;  
+  font-size: 23rpx;  
+  background: #4EEE94; 
+  padding-left: 19rpx;
+}

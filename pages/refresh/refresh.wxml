@@ -1,0 +1,19 @@
+<!--pages/refresh/refresh.wxml-->
+<import src = "/pages/index/cell/homeCell.wxml"/>
+ <view class='section' style="flex-direction:row;">
+     <block wx:for="{{cartoonArr}}" wx:key="item">
+      <template is="homecell" data="{{...item,imageBase,cellWidth}}"/>
+       
+      </block>
+     
+    <div class="week-out">
+		<div id="day1" class="day day1"></div>
+		<div class="day day2"></div>
+		<div class="day day3"></div>
+		<div class="day day4"></div>
+		<div class="day day5"></div>
+		<div id="day6" class="day day6"></div>
+		<div id="today" class="today" onclick="oDiv()">今日</div>
+	</div>
+ </view>  
+   

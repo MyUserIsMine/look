@@ -1,0 +1,155 @@
+<!--index.wxml-->
+<import src="/pages/index/cell/homeCell.wxml" />
+<import src="/pages/index/cell/bigCell.wxml" />
+<view>
+  <!-- 搜索框  -->
+  <view class='searchView'>
+    <view class='searchInput'>
+      <icon class="searchcion" size='15' type='search' style='margin-top:4px'></icon>
+      <input style='width:{{inputWidth}}px' placeholder="{{searchplaceholder}}" bindinput='searchInput' bindfocus='searchInputFocus' bindconfirm='searchInputConfirm' value='{{searchInputValue}}'>
+      </input>
+    </view>
+    <label wx:if="{{isSearching}}" bindtap='searchInputBlur' style='float:right;padding-right:5px;font-size:15px;line-height:50px;width:40px;text-align:center;position:relative'>取消</label>
+  </view>
+  <!-- 搜索结果界面 -->
+  <scroll-view scroll-y="true"style='height:{{searchResultScrollView}}px;padding-bottom:50px' class='search_resultView' wx:if="{{isSearching}}">
+    <view wx:if="{{serachResults.length!=0}}">
+      <view wx:for="{{serachResults}}">
+        <navigator url='/pages/cartoon/cartoon?id={{item.id}}'>
+          <image style='width:100px;height:100px;padding:8px' src="{{imageBase+item.appicons}}"></image>
+          <view style='display:inline-block;position:relative;top:-8px;width:{{searchResultUpdate}}'>
+            <view style='line-hight:20px;font-size:15px'>{{item.name}}</view>
+            <view style='line-hight:20px;font-size:12px;color:#666666'>{{item.tname}}</view>
+            <view style='line-hight:20px;font-size:12px;color:#666666'>{{item.cfyname}}</view>
+            <view style='line-hight:20px;font-size:12px;color:#666666'>作者：{{item.author}}</view>
+            <view style='line-hight:20px;font-size:12px;color:orangered;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;width:{{searchResultUpdate}}px'>更新到{{item.partname}}</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view style='text-align:center;font-size:15px;color:orangered' wx:else>
+      无搜索结果
+    </view>
+  </scroll-view>
+  
+  <view wx:if="{{!isSearching}}">
+    <view class="container" style='padding-top:50px'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="true" interval="{{interval}}" duration="{{duration}}" style='height: {{bannerHeight}}px'>
+      <block wx:for="{{imgUrls}}" wx:key="item">
+        <navigator url='/pages/cartoon/cartoon?id={{item.subid}}'>
+          <swiper-item>
+            <image src="{{imageBase}}{{item.src}}" style='width: 100%;' mode='widthFix' />
+          </swiper-item>
+        </navigator>
+      </block>
+    </swiper>
+
+    <view style='width: 100%;height:8px'></view>
+
+    <view class='section'>
+      <navigator url='/pages/refresh/refresh?id={{week}}' style="width: {{buttonWidth}}px;">
+        <view class="item" style="width: {{buttonWidth}}px;">
+          <image src="/images/z-update@2x.png" mode='widthFix' style="width: 40px;text-align : center"></image>
+          <view class="course-title" style='text-align : center '>更新</view>
+        </view>
+      </navigator>
+      <navigator url='/pages/ranking/ranking?from=1' style="width: {{buttonWidth}}px;">
+        <view class="item" style="width: {{buttonWidth}}px;">
+          <image class='moddle' src="/images/z-project@2x.png" mode='widthFix' style="width:40px;"></image>
+          <view class="course-title" style='text-align : center '>最热榜</view>
+        </view>
+      </navigator>
+      <navigator url='/pages/ranking/ranking?from=2' style="width: {{buttonWidth}}px;">
+        <view class="item" style="width: {{buttonWidth}}px;">
+          <image src="/images/z-ranking@2x.png" mode='widthFix' style="width: 40px;"></image>
+          <view class="course-title" style='text-align : center '>最新榜</view>
+        </view>
+      </navigator>
+    </view>
+
+ 
+    <navigator class='header' url='/pages/allCartoon/allCartoon?id=1'>
+      <view class='sectionTitle'>最热漫画</view>
+      <view class='img'>>></view>
+    </navigator>
+
+    <view class='section' style="flex-direction:row;">
+      <block wx:for="{{hotCartoon}}" wx:key="item">
+         <template is="homecell" data="{{...item,imageBase,cellWidth}}" /> 
+         
+      </block>
+    </view>
+
+
+    <view class='footer'></view>
+    <navigator class='header'>
+      <view class='sectionTitle'>编辑推荐</view>
+    </navigator>
+    <view class='section' style="flex-direction:row;">
+
+      <block wx:for="{{recommendCartoon}}" wx:key="item">
+        <template is="homecell" data="{{...item,imageBase,cellWidth}}" />
+
+      </block>
+    </view>
+    <view class='footer'>
+
+    </view>
+    <navigator class='header' url='/pages/theme/theme'>
+      <view class='sectionTitle'>题材</view>
+      <view class='img'>>></view>
+    </navigator>
+    <view class='topicCell' style="width:{{viewWidth}}px;overflow:hidden; white-space: nowrap;">
+      <scroll-view class="scroll-view_H" scroll-x="true" style="width:{{viewWidth}}px;height:110px; display: inline-block;">
+        <block wx:for="{{ticaiArr}}" wx:key="item">
+          <navigator class='naV' url='/pages/allCartoon/allCartoon?id=3&topicid={{item.id}}&title={{item.name}}' style="width:66px;display: inline-block">
+            <view class="topic" style="width: 66px;">
+              <image src="{{imageBase}}{{item.icons}}" mode='widthFix' style="width: 60px;"></image>
+              <view class="course-title" style=''>
+                {{item.name}}
+              </view>
+            </view>
+          </navigator>
+
+        </block>
+      </scroll-view>
+    </view>
+    <view class='footer'>
+
+    </view>
+
+    <navigator class='header' url='/pages/allCartoon/allCartoon?id=2'>
+      <view class='sectionTitle'>最新漫画</view>
+      <view class='img'>>></view>
+    </navigator>
+    <view class='section' style="flex-direction:row;">
+      <block wx:for="{{newCartoon}}" wx:key="item">
+        <!-- <template is="homecell" data="{{...item,imageBase,cellWidth}}" /> -->
+    <template is="bigcell" data="{{...item,imageBase,bigCellWidth}}" />
+      </block>
+    </view>
+    <!-- <view class='footer'>
+
+    </view> -->
+    <navigator class='header' url='/pages/refresh/refresh?id={{week}}'>
+      <view class='sectionTitle'>每日更新-{{weekDay}}</view>
+      <view class='img'>>></view>
+    </navigator>
+
+    <view class='section' style="flex-direction:row;">
+      <block wx:for="{{dayCartoon}}" wx:key="item">
+        <template is="homecell" data="{{...item,imageBase,cellWidth}}" />
+
+      </block>
+    </view>
+    <view class='footer'>
+
+    </view>
+   
+  </view>
+
+  </view>
+  <!-- <view animation="{{animation}}" class='weekBtn' style='opacity: {{opa}}' bindtap='today'>今天</view>
+  <button  class='circle-float' bindtap='rotate'>{{weekDay}}</button> -->
+  
+</view>

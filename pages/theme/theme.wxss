@@ -1,0 +1,24 @@
+/* pages/theme/theme.wxss */
+.topic{
+  display: inline-block;
+  text-align: center;
+  
+}
+
+.naV{
+  margin: 8px 0px 0px 8px;
+}
+
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: red
+}
+.course-title{
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,8 @@
+<!--pages/ranking/ranking.wxml-->
+<import src = "/pages/ranking/rankCell/rankCell.wxml"/>
+  <view class='section' >
+     <block wx:for="{{newArr}}" wx:key="item">
+      <template is="rankcell" data="{{...item,imageBase,viewWidth}}"/>
+       
+      </block>
+ </view> 

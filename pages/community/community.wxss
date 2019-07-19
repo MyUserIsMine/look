@@ -1,0 +1,22 @@
+/* pages/community/community.wxss */
+.tab_item{
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  font-size: 15px;
+  height: 30px;
+}
+.tab_item_selected{
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  font-size: 15px;
+  color: orangered;
+  height: 30px;
+  border-bottom: 1px solid  ;
+}
+swiper{
+  float: left;
+  width: 100%;
+  height: 100vh;
+}

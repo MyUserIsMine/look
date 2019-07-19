@@ -1,0 +1,81 @@
+<view style='background-color:white'>
+  <!-- 顶部图片 -->
+  <image class='cartoon_banner' src="{{cartoon_coverImage}}">
+    <!-- <view class='cartoon_title'>{{ cartoon_title }}</view> -->
+  </image>
+
+  <!-- tab  -->
+  <!-- <view class='cartoon_tab_backgroundView'>
+    <view class='cartoon_tab' wx:for="{{cartoon_tabs}}">
+      <view class="{{tab_selected_num==index?'cartoon_tab_item_selected':'cartoon_tab_item'}}" bindtap='changeTab' data-id="{{index}}"> {{item}}</view>
+    </view>
+  </view> -->
+
+  <!-- content  -->
+  <!-- <swiper class="cartoon_tab_content" current="{{tab_selected_num}}" bindchange="switchTab"> 
+    <swiper-item wx:for="{{cartoon_tabs}}"> -->
+  <!-- 简介  -->
+  <view style='margin-bottom:5px;background-color:white;padding:0 5px 0 5px'>
+    <view style='font-size:15px;margin-bottom:5px'>作品介绍</view>
+    <view class="{{showDescrDetail==true?'cartoon_descr':'cartoon_descr_content'}}" bindtap='showDescrDetail'>{{comic_info.descr}}</view>
+    <view class='cartoon_classify'>
+      <label class='cartoon_classify_item' style='font-size: 12px'>{{comic_info.tname}}</label>
+      <label class='cartoon_classify_item' style='font-size: 12px'>{{comic_info.cfyname}}</label>
+    </view>
+    <view>
+      <image src="../../images/renqiz.png" style='width:20px;height:15px'></image>
+      <label style='margin:0 15px 0 2px;height:30px;position:relative;top:-2px' class='cartoon_descr'>{{comic_info.pv}}</label>
+      <image src="../../images/dianz.png" style='width:20px;height:15px'></image>
+      <label class='cartoon_descr' style='margin:0 0 0 2px;height:30px;position:relative;top:-2px'>{{comic_info.top}}</label>
+      <view class='read' bindtap='benginRead'>开始阅读</view>
+    </view>
+
+
+
+    <view style='background-color:#eeeeee;height:1px'></view>
+    <view>
+      <label class='cartoon_descr'>作者: {{comic_info.author}}</label>
+      <view style='float:right;align-items:center'>
+
+        <view class='updatestate{{comic_info.updatestate}}'>{{comic_updatestate}}</view>
+        <label class='cartoon_descr' style='font-size:12px'>{{comic_updateDate}}</label>
+      </view>
+
+      <view>
+        <label></label>
+        <label>{{}}</label>
+      </view>
+    </view>
+  </view>
+  <view style='height:8px;background-color:#eeeeee'></view>
+  <!-- 目录 -->
+  <!-- <scroll-view scroll-y="true" style="height: {{content_scroll_height+'px'}}" wx:if="{{index==1}}"> -->
+  <view style='background-color:white'>
+    <view>
+      <view style='padding:5px 5px 0 5px;margin-bottom:10px'>
+        <label>全部章节({{cartoon_chapters.length}})</label>
+        <view style='float:right' bindtap='changChaptersOrder'>
+          <label>{{chaptesOrder}}</label>
+          <image style='width:10px;height:12px' src="{{chaptesReverseOder==true?'../../images/daoxu.png':'../../images/zhengxu.png'}}">
+          </image>
+        </view>
+
+      </view>
+      <view wx:for="{{cartoon_chapters}}" wx:key="unique">
+        <navigator url="{{'./cartoonDetail/cartoonDetail?id='+item.id+'&cartoon_chapters_str='+cartoon_chapters_str}}">
+          <view id="{{index}}" class='cartoon_chapters_view'>
+            <image src="{{imageBaseUrl+item.icon}}" style='margin-left: 5px;width:60px;height:60px' class='cartoon_chapters_image'></image>
+            <view class='cartoon_chapters_descr'>
+              <view class='cartoon_chapters_descr_item' style="width:{{chapter_name_width}}px">{{item.name}}</view>
+              <view class='cartoon_chapters_descr_item' style='margin-left: 8px'>{{item.iospubtime}}</view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- </scroll-view>
+     </swiper-item> -->
+  <!-- </swiper>  -->
+
+</view>

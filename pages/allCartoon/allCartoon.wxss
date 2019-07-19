@@ -1,0 +1,7 @@
+/* pages/allCartoon/allCartoon.wxss */
+@import "/pages/index/cell/homeCell.wxss";
+.section{
+  display: flex;
+  flex-wrap: wrap; 
+  
+}

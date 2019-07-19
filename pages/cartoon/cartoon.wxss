@@ -1,0 +1,121 @@
+/* pages/cartoon/cartoon.wxss */
+.cartoon_banner{
+  width: 100vw;
+  height: 50vw;
+  text-align: left;
+}
+/* .cartoon_title{
+  padding-top: 40vw;
+  padding-left: 5px;
+  color: white;
+  font-size: 15px
+} */
+.cartoon_tab_backgroundView{
+  border-bottom: 1px solid lightgrey;
+}
+.cartoon_tab{
+  display: inline-block;
+  width: 30%;
+  margin-left: 10%; 
+  margin-right: 10%;
+}
+.cartoon_tab_item{
+  text-align: center;
+  font-size: 15px;
+  height: 30px;
+}
+.cartoon_tab_item_selected{
+  border-bottom: 2px solid orangered;
+  color: orangered;
+  text-align: center;
+  font-size: 15px;
+  height: 30px;
+}
+.cartoon_tab_content{
+  /* background-color: yellow; */
+  height: 100vh;
+}
+.cartoon_descr{
+  line-height: 20px;
+  font-size: 13px;
+  color: #959595;
+}
+.cartoon_descr_content{
+  line-height: 20px;
+  font-size: 13px;
+  color: #959595;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal!important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.cartoon_classify_item{
+  margin-right: 5px;
+  padding-left: 2px;
+  padding-right: 2px; 
+  font-size: 15px;
+  color: #999999;
+  border: 1px solid #999999;
+  border-radius: 2px;
+}
+.cartoon_chapters_descr{
+  float: left;
+  line-height: 30px;
+  font-size: 13px;
+  color: #333333;
+  display: block;
+}
+.cartoon_chapters_image{
+  float: left;
+}
+.cartoon_chapters_descr_item{
+   display: block;
+   /* margin-left: 5px; */
+   width: 100px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow:ellipsis;
+}
+.cartoon_chapters_view{
+  width: 100%;
+  height: 65px;
+  /* padding: 0 5px 0 5px; */
+  margin-bottom: 5px;
+}
+.read{
+  background-color:orangered;
+  width: 80px;
+  height: 25px;
+  color:white;
+  float:right;
+  position: relative;
+   top: -5px; 
+  text-align: center;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.updatestate0{
+  background-color: red;
+  font-size: 10px;
+  color: white;
+  width: 40px;
+  height: 16px;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 3px;
+}
+.updatestate1{
+  background-color: orange;
+  font-size: 10px;
+  color: white;
+  width: 40px;
+  height: 16px;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 3px;
+}

@@ -1,0 +1,88 @@
+<view class='page_container'>
+
+  <!-- 搜索框  -->
+  <view>
+    <view class='searchView'>
+      <icon class="searchcion" size='15' type='search' style='margin-top:8px'></icon>  
+      <input  placeholder="{{searchplaceholder}}" bindinput='searchInput' bindfocus='searchInputFocus' bindblur='searchInputBlur'></input>
+    </view>
+  </view>
+  
+
+  <!-- 搜索结果界面 -->
+  <view class='search_resultView' wx:if="{{isSearching}}" style='width: 100vw;height: 100vh;background-color: white; position: absolute; z-index: 999'>
+    sfasfas
+  </view>
+
+  <!-- 热搜关键词  -->
+  <view class='tags_view' wx:else>
+    <view style='display:block;font-size:14px;margin-bottom:5px'>{{tags_title}}</view>
+    <scroll-view scroll-y style="height: 60px;">
+     <view wx:for="{{tags}}" wx:key="*this" style="display: inline">
+      <view class='searchItem'>{{item}}</view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 分类  -->
+  <view class='categories_view'>
+    <!-- 分类两个tab  -->
+    <view class='categories_select' style='margin-bottom:5px;border-bottom: 1px solid #CCCCCC;height:36px'>
+      <view wx:for="{{category_titles}}">
+        <view data-id="{{index}}" class="{{category_selected_num==index?'categories_title_selected':'categories_title'}}" bindtap='selectCategory' >
+          {{item}}
+        </view>
+      </view>
+      
+    </view>
+    
+
+    <!-- 分类详情界面  -->
+    
+  <swiper class="tab-content" current="{{category_selected_num}}" bindchange="switchTab" style="height: {{content_scroll_height+'px'}}">
+    <swiper-item wx:for="{{category_titles}}">
+      <scroll-view scroll-y="true" style="height: {{content_scroll_height+'px'}}" wx:if="{{index==0}}">
+        <block >
+          <view class='ticai_content'>
+              <view wx:for="{{categories_ticai}}" wx:for-item="item">
+              <view class='ticai_item'>
+                <image src="{{imageBaseUrl+item.iconr}}" mode="aspectFill"></image>
+                <view class='ticai_name'>{{item.name}}</view>
+                <view class='ticai_num'>{{item.comicnum}}部</view>
+              </view>  
+            </view> 
+          </view>    
+        </block>
+      </scroll-view> 
+      <scroll-view scroll-y="true" style="height: {{content_scroll_height+'px'}}" wx:if="{{index==1}}">
+        <block wx:if="{{index==1}}">
+          <view class='content_content'>
+            <view wx:for="{{categories_content}}" wx:for-item="item">
+              <view class='content_item_superview'> 
+              <view class='content_item'>
+                  <view class='ticai_num'>{{item.name}}</view>
+                  <view class='ticai_name'>{{item.comicnum}}</view>
+                </view>
+              </view> 
+              
+            </view>
+          </view>
+        </block>
+       </scroll-view> 
+    </swiper-item>
+  </swiper>
+  
+  </view>
+  
+
+</view>
+
+<template name='ticai_cover'>
+  <view>
+    <view class='ticai_cover_image'>
+      <image src="{{icons}}"></image>
+    </view>
+    <text>英雄联盟{{name}}</text>
+    <text>132部{{comicnum}}</text>
+  </view>
+</template> 

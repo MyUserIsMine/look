@@ -1,0 +1,18 @@
+<template name="rankcell">
+
+       <navigator class='naV' url='/pages/cartoon/cartoon?id={{id}}' style="width:100%;">
+       <view>
+       <image class='mainImg' src="{{imageBase}}{{appiconu}}" mode='widthFix' style="width: 85px;"></image>
+            <view class="rightView" >
+                <view class="title">{{name}}</view>
+                <view class="text">{{tname}}</view>
+                <view class="text">{{cfyname}}</view>
+                <view class="text">{{author}}</view>
+                <view class="chapter" style='width:{{viewWidth}}px'>{{partname}}</view>
+            </view>
+        </view>
+        <view class='space'></view>
+        <view class='line'></view>
+        </navigator>
+        
+</template>

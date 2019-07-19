@@ -1,0 +1,17 @@
+<template name="bigcell">
+
+       <navigator class='naVa' url='/pages/cartoon/cartoon?id={{id}}'>
+    <view class="bigitem" >
+           <image class='bigImage' src="{{imageBase}}{{appicono}}" mode='widthFix' style='width:{{bigCellWidth}}px'></image>
+            <view class="bigcourse-title">
+                <text class="title">{{name}}</text>
+            </view>
+            <view class="subtitle">
+                <text class="title">{{descr}}</text>
+            </view>
+             <view class='footer'>
+
+    </view>
+        </view>
+        </navigator>
+</template>

@@ -1,0 +1,4 @@
+<!--cartoonDetail.wxml-->
+<view>
+  <image wx:for="{{pictures}}" wx:key='unique' src="{{imageBaseUrl+item}}" style='width:100%;' mode='widthFix'></image>
+</view>

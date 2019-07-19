@@ -1,0 +1,9 @@
+<!--pages/allCartoon/allCartoon.wxml-->
+<import src = "/pages/index/cell/homeCell.wxml"/>
+
+ <view class='section' style="flex-direction:row;">
+     <block wx:for="{{cartoonArr}}" wx:key="item">
+      <template is="homecell" data="{{...item,imageBase,cellWidth}}"/>
+       
+      </block>
+ </view>  

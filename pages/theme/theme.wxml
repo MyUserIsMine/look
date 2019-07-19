@@ -1,0 +1,13 @@
+<!--pages/theme/theme.wxml-->
+<view style="flex-direction:row;">
+ <block wx:for="{{themeArr}}" wx:key="item">
+  <navigator class='naV' url='/pages/allCartoon/allCartoon?id=3&topicid={{item.id}}&title={{item.name}}' style="width:{{cellWidth}}px;display: inline-block">
+    <view class="topic"  style="width: {{cellWidth}}px;">
+           <image src="{{imageBase}}{{item.iconr}}" mode='widthFix' style="width: {{cellWidth}}px;"></image>
+            <view class="course-title" style=''>
+                {{item.name}}
+            </view>
+        </view>
+        </navigator>
+</block>
+</view>

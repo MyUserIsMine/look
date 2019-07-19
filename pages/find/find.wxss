@@ -1,0 +1,127 @@
+.searchView_searching {  
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+  margin-left: 20rpx;
+  margin-right: 20rpx; 
+  width: 80vw;
+  display: inline-block;
+}
+.searchView { 
+  border-radius: 30rpx;  
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  background-color: #ebebeb; 
+}  
+input{  
+  font-size: 13px;
+  margin-left: 60rpx;  
+  height: 40rpx;  
+  border-radius: 10px;
+  
+}
+.search_resultView{
+  width: 100vw;
+  height: 100vh;
+   background-color: white; 
+  position: absolute; 
+  z-index: 999
+}
+.searchcion {  
+  margin: 10rpx 10rpx 10rpx 10rpx;  
+  position: absolute;  
+  left:25rpx;  
+  z-index: 2;  
+  width: 20px;  
+  height: 20px;  
+  text-align: center;  
+}
+.tags_view{
+  font-size: 15px;
+  color: #545454;
+  margin: 10px 10px 0 10px;
+}
+.searchItem{
+  color: #545454;
+  display: inline-block;
+  border: 1px solid #CCCCCC; 
+  height: 18px;
+  padding: 0 2px 0 2px;
+  margin: 0 3px 3px 3px;
+  border-radius: 3px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+.categories_title
+{
+  text-align: center;
+  width: 50%;
+  /* display: inline-block; */
+  float: left;
+  line-height: 36px;
+  font-size: 17px;
+}
+.categories_title_selected{
+  float: left;
+  /* display: inline-block; */
+  width: 50%;
+  text-align: center;
+  font-size: 17px;
+  color: orangered;
+  line-height: 36px;
+  border-bottom: 1px solid orangered; 
+}
+.ticai_content{
+  width: 100%;
+  background-color: yellow;
+}
+.content_content{
+  width: 100%;
+  background: yellow;
+}
+.ticai_item{
+  float: left;
+  width: 20vw;
+  text-align: center;
+}
+.content_item_superview{
+  float: left;   
+  text-align: center;
+  width: 25vw;
+  height: 20vw;
+}
+.content_item{
+  padding-top: 5px;
+  display: inline-block;
+  border: 1px solid #F1592A; 
+  border-radius: 5px;
+  width: 18vw;
+  height: 12vw; 
+  text-align: center;
+}
+image{
+  padding-top: 5px;
+  width: 18vw;
+  height: 24vw;
+}
+.ticai_name{
+  color: #545454;
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.ticai_num{
+  color: orangered;
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+ swiper{
+  float: left;
+  width: 100%;
+} 

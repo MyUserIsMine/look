@@ -1,0 +1,15 @@
+.item{
+  text-align: center;
+  
+}
+
+.course-title{
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+.naV{
+  margin: 8px 0px 0px 8px;
+}

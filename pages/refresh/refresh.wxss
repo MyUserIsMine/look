@@ -1,0 +1,219 @@
+/* pages/refresh/refresh.wxss */
+@import "/pages/index/cell/homeCell.wxss";
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #777777;  
+    text-align: center;  
+    line-height: 80rpx;
+    }  
+
+.swiper-tab-list{  
+  font-size: 30rpx;  
+    display: inline-block;  
+    width: 14%;  
+    color: #777777;  
+}  
+
+.on{ 
+  color: #da7c0c;  
+  border-bottom: 5rpx solid #da7c0c;
+    }  
+  
+.swiper-box{
+   display: block; 
+   height: 100%;
+    width: 100%; 
+    overflow: hidden;
+    
+  }  
+
+.swiper-box view{  
+    text-align: center;  
+}  
+
+.section{
+  display: flex;
+  flex-wrap: wrap; 
+  
+}
+
+.circle-float{  
+  color: #ffffff;  
+  position: fixed;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  bottom: 50rpx;  
+  right: 50rpx;  
+  width: 120rpx;  
+  height: 120rpx;  
+  border-radius: 50%;  
+  font-size: 28rpx;  
+  background: rgba(255, 140, 105, 0.7);
+  
+}  
+
+.week-out{
+			position:fixed;
+			bottom:0px;
+			right:0px;
+			width:300px;
+			height: 240px;
+		}
+		.today{
+			position:absolute;
+			bottom: 25px;
+			right:25px;
+			display:inline-block;
+			width:50px;
+			height:50px;
+			line-height:50px;
+			border-radius:15px;
+			background-color:orange;
+			color:#fff;
+			text-align:center;
+			overflow:hidden;
+		}
+		.day{
+			display:inline-block;
+			position: absolute;
+			top:95%;
+			right:5%;
+			width:35px;
+			height:35px;
+			line-height:35px;
+			border-radius:50%;
+		
+			color:#fff;
+      background: rgba(255, 140, 105, 1);
+			text-align:center;
+			overflow:hidden;
+			-webkit-animation-duration: .3s;
+		  animation-duration: .3s;
+		  -webkit-animation-fill-mode: both;
+		  animation-fill-mode: both;
+		}
+		/*.day1{
+			right: 10%;
+			top: 10%;
+		}*/
+		/*.day2{
+	    right: 27%;
+    	top: 17%;
+		}*/
+		/*.day3{
+			right: 42%;
+			top: 32%;
+		}*/
+		/*.day4{
+			right: 52%;
+			top: 52%;
+		}*/
+		/*.day5{
+			right: 58%;
+			top: 75%;
+		}*/
+		/*.day6{
+			right: 60%;
+			top: 95%;
+		}*/
+		@keyframes day1 {
+		  from{
+		    top:95%;
+				right:5%;
+		  }
+
+		  to{
+		    right: 1%;
+				top: 30%;
+		  }
+		}
+		.day1 {
+		  -webkit-animation-name: day1;
+		  animation-name: day1;
+		}
+		@keyframes day2 {
+		  from{
+		    top:95%;
+				right:5%;
+		  }
+
+		  to{
+        
+		    right: 15%;
+  			top: 35%;
+		  }
+		}
+
+		.day2 {
+		  -webkit-animation-name: day2;
+		  animation-name: day2;
+		}
+		@keyframes day3 {
+		  from{
+		    top:95%;
+				right:5%;
+		  }
+
+		  to{
+		    right: 29%;
+				top: 45%;
+		  }
+		}
+
+		.day3 {
+		  -webkit-animation-name: day3;
+		  animation-name: day3;
+
+		}
+		@keyframes day4 {
+		  from{
+		    top:95%;
+				right:5%;
+             
+		  }
+
+		  to{
+		    right: 40%;
+  			top: 55%;
+             
+		  }
+		}
+
+		.day4 {
+		  -webkit-animation-name: day4;
+		  animation-name: day4;
+		}
+		@keyframes day5 {
+		  from{
+		    top:95%;
+				right:5%;
+		  }
+
+		  to{
+		    right: 50%;
+				top: 65%;
+		  }
+		}
+
+		.day5 {
+		  -webkit-animation-name: day5;
+		  animation-name: day5;
+		}
+		@keyframes day6 {
+		  from{
+		    top:95%;
+				right:5%;
+		  }
+
+		  to{
+		    right: 50%;
+				top: 83%;
+		  }
+		}
+
+		.day6 {
+		  -webkit-animation-name: day6;
+		  animation-name: day6;
+			
+		}

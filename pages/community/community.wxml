@@ -1,0 +1,16 @@
+<view class='community_container'>
+  <!-- 选项卡 -->
+  <view class='community_tab_view' wx:for="{{tabTitles}}">
+    <view bindtap='selectTab' data-id="{{index}}" class="{{tab_selected_num==index?'tab_item_selected':'tab_item'}}">{{item}}</view>
+  </view>
+  <swiper class="tab-content" current="{{tab_selected_num}}" duration="300" bindchange="switchTab"
+     style="height:{{winHeight}}rpx">
+        <swiper-item wx:for="{{tabTitles}}">
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <block >
+                    <view></view>
+                </block>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

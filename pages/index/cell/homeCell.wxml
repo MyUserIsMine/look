@@ -1,0 +1,11 @@
+<template name="homecell">
+
+       <navigator class='naV' url='/pages/cartoon/cartoon?id={{id}}' style="width: {{cellWidth}}px;">
+    <view class="item"  style="width: {{cellWidth}}px;">
+           <image src="{{imageBase}}{{appiconu}}" mode='widthFix' style="width: {{cellWidth}}px;"></image>
+            <view class="course-title">
+                <text class="title">{{name}}</text>
+            </view>
+        </view>
+        </navigator>
+</template>

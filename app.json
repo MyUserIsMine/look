@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/community/community",
+    "pages/find/find",
+    "pages/cartoon/cartoon",
+    "pages/pic/picture",
+    "pages/owner/owner",
+    "pages/collection/collection",
+    "pages/cartoon/cartoonDetail/cartoonDetail",
+    "pages/refresh/refresh",
+    "pages/ranking/ranking",
+    "pages/allCartoon/allCartoon",
+    "pages/theme/theme",
+    "pages/demo/demo"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "撸卡漫画",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
